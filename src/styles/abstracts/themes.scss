@@ -1,0 +1,38 @@
+$almost-gold: rgb(212, 175, 55);
+$almost-green: rgb(47, 62, 28);
+$almost-black: rgb(16, 15, 14);
+$almost-blue: rgba(0, 81, 255, 0.8);
+$almost-grey: rgba(255, 255, 255, 0.8);
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+* {
+    --button-bg-color: #{$almost-green};
+    --button-text-color: #{$almost-gold}
+}
+
+
+:root {
+    --primary-color: #{$almost-gold};
+    --secondary-color: #{$almost-green};
+    --third-color: #{$almost-black};
+    --wide-color: #{$white};
+    --small-color: #{$black};
+    --navbar-bg-color: #{$white};
+    --footer-bg-color: #{$almost-green};
+    --conatct-link-color: #{$almost-green};
+    --copyright-message-color: #{$almost-gold};
+}
+
+[data-theme="dark"] {
+    --primary-color: #{$almost-gold};
+    --secondary-color: #{$almost-green};
+    --third-color: #{$almost-black};
+    --wide-color: #{$black};
+    --small-color: #{$white};
+    --navbar-bg-color: #{$almost-green};
+    --footer-bg-color: #{$almost-gold};
+    --conatct-link-color: #{$almost-gold};
+    --copyright-message-color: #{$almost-green};
+}

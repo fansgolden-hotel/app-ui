@@ -1,0 +1,159 @@
+// Variables
+$a-transition-duration: 200ms;
+$a-width: 130px;
+$a-height: 40px;
+
+
+#navbar-container {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+
+    box-shadow: -1px 0px 10px 0px var(--small-color);
+    background-color: var(--navbar-bg-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Nav Bar
+    #navbar {
+        width: $central-content-width;
+        height: 60px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+
+
+        /*
+                        TODO:
+                        1.
+                            Deprecation Warning [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+                            Use color.adjust instead.
+                            Use color.change instead.
+
+                            background-color: adjust-color($color: $dark-gold-color, $alpha: 0);
+                            background-color: change-color($color: $dark-gold-color, $alpha: 1.0);
+                        2.
+                            CSS, SCSS and Saas autocompletion extension
+                        */
+
+        #logo {
+            width: 10vw;
+            border: none;
+            text-decoration: none;
+
+            p {
+                font-size: 30px;
+                text-align: start;
+                color: var(--primary-color);
+            }
+        }
+
+        #center-a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        #center-a a {
+            width: $a-width;
+            height: $a-height;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            text-decoration: none;
+
+            border-radius: 5px;
+            transition-duration: $a-transition-duration;
+
+
+            color: var(--navbar--color);
+            border: 1px solid var(--small-color);
+
+            .unactive-dot {
+                color: transparent;
+            }
+
+
+            &:hover {
+                border: 2px solid var(--small-color);
+            }
+
+        }
+
+        #right-a {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            #dark-mode-toggle {
+                width: $a-height;
+                height: $a-height;
+
+                background-color: $white;
+                border: 1px solid $black;
+                
+                background-image: url("../../assets/icons/night-mode.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+
+                border-radius: 50px;
+                font-size: 19px;
+
+                transition: animation $a-transition-duration;
+
+                &:hover {
+                    animation: rotate-icon 700ms forwards ease-in-out;
+                }
+
+                @keyframes rotate-icon {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(180deg);
+                    }
+
+                }
+            }
+
+            #connect {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                text-align: center;
+                text-decoration: none;
+                width: calc($a-width * 1.2);
+                height: $a-height;
+
+                background-color: var(--primary-color);
+                color: var(--secondary-color);
+                border-radius: 50px;
+                border: 2px solid transparent;
+                font-size: 19px;
+
+                transition-duration: $a-transition-duration;
+
+                &:hover {
+                    border: 2px solid var(--small-color);
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,14 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+#root {
+  width: auto;
+  height: auto;
+
+  font-family: Nunito;
+  text-align: center;
+
+  background-color: var(--wide-color);
+  color: var(--small-color);
+}
