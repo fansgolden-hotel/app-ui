@@ -1,0 +1,23 @@
+#content {
+    @media screen and (max-width: 1320px) {
+        display: none;
+    }
+}
+
+#unsupported {
+    display: none; // hidden by default
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 1320px) {
+    #unsupported {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

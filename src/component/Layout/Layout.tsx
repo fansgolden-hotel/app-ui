@@ -2,9 +2,9 @@ import "./LayoutStyle.scss";
 
 
 type LayoutProps = {
-  navbar: React.ReactNode;
-  mainContent: React.ReactNode;
-  footer: React.ReactNode;
+    navbar: React.ReactNode;
+    mainContent: React.ReactNode;
+    footer: React.ReactNode;
 };
 
 export default function Layout({
@@ -14,11 +14,14 @@ export default function Layout({
 }: LayoutProps) {
     return (
         <>
-        <div>
-            {navbar}
-            {mainContent}
-            {footer}
-        </div>
+            <div id="content">
+                {navbar}
+                {mainContent}
+                {footer}
+            </div>
+            <div id="unsupported">
+                Device not supported
+            </div>
         </>
     );
 }
