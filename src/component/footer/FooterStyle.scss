@@ -2,7 +2,7 @@ $navbar-content-width: $lower-content-width;
 
 #footer-container {
     width: inherit;
-    height: 20vh;
+    height: auto;
     margin-bottom: 2px;
 
     display: flex;
@@ -21,6 +21,7 @@ $navbar-content-width: $lower-content-width;
         justify-content: center;
 
         #content {
+            margin: 20px 0;
             text-align: center;
 
             #a-container {
@@ -36,7 +37,7 @@ $navbar-content-width: $lower-content-width;
                 a {
                     text-decoration: none;
                     color: var(--wide-color);
-                   // color: color.scale($third-color, $lightness: 10%);
+                    // color: color.scale($third-color, $lightness: 10%);
                     transition-duration: 200ms;
 
                     &:hover {
@@ -51,6 +52,43 @@ $navbar-content-width: $lower-content-width;
                 background-color: var(--copyright-message-color);
                 margin: 50px 0;
                 opacity: 0.5;
+            }
+
+            #social-media-link {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                &>a {
+                    width: 30px;
+                    height: 30px;
+
+                    margin-bottom: 30px;
+
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+
+                    cursor: pointer;
+                }
+
+                #facebook {
+                    background-image: url("../../assets/icons/facebook.png");
+                }
+
+                #instagram {
+                    background-image: url("../../assets/icons/instagram.png");
+                }
+
+                #pinterest {
+                    background-image: url("../../assets/icons/pinterest.png");
+                }
+
+                #whatsapp {
+                    background-image: url("../../assets/icons/whatsapp.png");
+                }
             }
 
             #copyright-message {
